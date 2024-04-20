@@ -2,14 +2,19 @@
   position: fixed;
   top: 0;
   display: flex;
+  line-height: 2rem;
   width: 100%;
   height: 60px;
   z-index: 1;
-  padding: 10px;
+  padding: 10px 5px;
   justify-content: space-between;
 
   transition-timing-function: ease-in;
   transition: all 0.5s;
+}
+
+.nav a {
+  text-decoration: none;
 }
 
 .nav__black {
@@ -18,16 +23,38 @@
 }
 
 .nav__logo {
-  position: fixed;
-  left: 20px;
   width: 20px;
   object-fit: contain;
   background-color: none;
 }
 
 .nav__avatar {
-  position: fixed;
-  right: 20px;
   width: 30px;
   object-fit: contain;
+}
+
+.nav h2 {
+  color: red;
+}
+.nav ul {
+  list-style: none;
+  display: flex;
+  padding: 1rem;
+}
+.nav ul .net {
+  color: #e50914;
+}
+.nav ul li {
+  margin: 0 1rem;
+}
+
+/* .navaccueil ul li i {
+  font-size: 10rem;
+} */
+.nav ul li a {
+  color: #fff;
+  cursor: pointer;
+}
+.nav ul li a:hover {
+  opacity: 0.8;
 }
