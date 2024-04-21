@@ -2,6 +2,7 @@
   color: white;
   object-fit: contain;
   height: 548px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,4 +58,22 @@
     rgba(3, 3, 3, 0.61),
     #111
   );
+}
+
+@media (max-width: 600px) {
+  .banner {
+    width: 600px;
+  }
+}
+
+@media (max-width: 500px) {
+  .banner {
+    width: 500px;
+  }
+}
+
+@media (max-width: 406px) {
+  .banner {
+    width: min-content;
+  }
 }

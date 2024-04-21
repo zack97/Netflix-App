@@ -21,43 +21,43 @@ function Nav() {
         <ul>
           <li>
             <h2>
-              <a href="./index.html" class="net">
+              <a href="#" class="net">
                 ZachFliX
               </a>
             </h2>
           </li>
-          <li>
-            <a href="./Home">Home</a>
+          <li className="none">
+            <a href="#">Home</a>
           </li>
-          <li>
-            <a href="./Series">Series</a>
+          <li className="none">
+            <a href="#">Series</a>
           </li>
-          <li>
-            <a href="./Movies">Movies</a>
+          <li className="none">
+            <a href="#">Movies</a>
           </li>
-          <li>
-            <a href="./Most-Watch">Most Watch</a>
+          <li className="none">
+            <a href="#">Most Watch</a>
           </li>
-          <li>
-            <a href="./MyList">My List</a>
+          <li className="none">
+            <a href="#">My List</a>
           </li>
         </ul>
       </div>
       <div>
         <ul>
-          <li>
-            <a href="Search">
+          <li className="">
+            <a href="#">
               <i class="fas fa-search"></i>
             </a>
           </li>
-          <li>
-            <a href="./Login">Login</a>
+          <li className="none1">
+            <a href="#">Login</a>
           </li>
-          <li>
-            <a href="./Create-account">Create account</a>
+          <li className="none1">
+            <a href="#">Create account</a>
           </li>
-          <li>
-            <a href="./Notification">
+          <li className="none1">
+            <a href="#">
               <i class="fas fa-bell"></i>
             </a>
           </li>

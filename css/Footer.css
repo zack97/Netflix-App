@@ -865,3 +865,26 @@
   height: 450px;
   margin-top: 4.5rem;
 }
+
+@media (max-width: 600px) {
+  footer {
+    max-width: 600px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 500px) {
+  footer {
+    max-width: 500px;
+    overflow: hidden;
+    text-align: center;
+  }
+}
+
+@media (max-width: 406px) {
+  footer {
+    max-width: min-content;
+    overflow: hidden;
+    text-align: center;
+  }
+}

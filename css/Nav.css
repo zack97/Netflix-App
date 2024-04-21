@@ -59,3 +59,17 @@
 .nav ul li a:hover {
   opacity: 0.8;
 }
+
+/******/
+
+@media (max-width: 1080px) {
+  .none {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .none1 {
+    display: none;
+  }
+}
