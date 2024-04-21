@@ -22,7 +22,7 @@ function Nav() {
           <li>
             <h2>
               <a href="./index.html" class="net">
-                NETFLIX
+                ZachFliX
               </a>
             </h2>
           </li>
