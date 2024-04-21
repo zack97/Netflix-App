@@ -27,37 +27,37 @@ function Nav() {
             </h2>
           </li>
           <li>
-            <a href="#">Home</a>
+            <a href="./Home">Home</a>
           </li>
           <li>
-            <a href="#">Series</a>
+            <a href="./Series">Series</a>
           </li>
           <li>
-            <a href="#">Movies</a>
+            <a href="./Movies">Movies</a>
           </li>
           <li>
-            <a href="#">Most Watch</a>
+            <a href="./Most-Watch">Most Watch</a>
           </li>
           <li>
-            <a href="#">My List</a>
+            <a href="./MyList">My List</a>
           </li>
         </ul>
       </div>
       <div>
         <ul>
           <li>
-            <a href="#">
+            <a href="Search">
               <i class="fas fa-search"></i>
             </a>
           </li>
           <li>
-            <a href="#">Login</a>
+            <a href="./Login">Login</a>
           </li>
           <li>
-            <a href="#">Create account</a>
+            <a href="./Create-account">Create account</a>
           </li>
           <li>
-            <a href="#">
+            <a href="./Notification">
               <i class="fas fa-bell"></i>
             </a>
           </li>
