@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "../css/Nav.css";
+import { useNavigate } from "react-router-dom";
 
 function Nav() {
   const [show, handleShow] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -21,7 +23,7 @@ function Nav() {
         <ul>
           <li>
             <h2>
-              <a href="#" class="net">
+              <a onClick={() => navigate('/')} className="net">
                 ZachFliX
               </a>
             </h2>
@@ -47,18 +49,18 @@ function Nav() {
         <ul>
           <li className="">
             <a href="#">
-              <i class="fas fa-search"></i>
+              <i className="fas fa-search"></i>
             </a>
           </li>
           <li className="none1">
-            <a href="#">Login</a>
+            <a onClick={() => navigate('/login')}>Login</a>
           </li>
           <li className="none1">
-            <a href="#">Create account</a>
+            <a onClick={() => navigate('/signup')}>Create account</a>
           </li>
           <li className="none1">
             <a href="#">
-              <i class="fas fa-bell"></i>
+              <i className="fas fa-bell"></i>
             </a>
           </li>
           <li>

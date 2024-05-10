@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "./axios";
 import "../css/Row.css";
 import YouTube from "react-youtube";
-import movieTrailer from "movie-trailer";
+import movieTrailer from "movie-trailer"; //no componenet for this
+import { FaChevronCircleLeft,FaChevronCircleRight  } from "react-icons/fa";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
@@ -42,10 +43,16 @@ function Row({ title, fetchUrl, isLargeRow }) {
     }
   };
 
+  const scroll = (rowId, scrollDistance) => {
+    const rowPosters = document.getElementById(rowId);
+    rowPosters.scrollLeft += scrollDistance;
+  };
+
   return (
     <div className="row">
       <h2>{title}</h2>
-      <div className="row__posters">
+      <FaChevronCircleLeft onClick={() => scroll(title, -200)} size={40} className="chevron_buttons_left"/>
+      <div id={title} className="row__posters">
         {movies.map((movie) => {
           return (
             <img
@@ -60,6 +67,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
           );
         })}
       </div>
+      <FaChevronCircleRight onClick={() => scroll(title, 200)} size={40} className="chevron_buttons_right"/>
       {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
     </div>
   );

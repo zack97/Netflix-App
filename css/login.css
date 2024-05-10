@@ -1,220 +1,105 @@
-/* .login-container {
-  height: 700px;
-  background: red;
+#login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   color: white;
-}
-.login-container h1,
-.login-container h3,
-.login-container p {
-  color: white;
-  font-family: "Poppins", sans-serif;
-  margin-bottom: 2rem;
-}
-.login-container h1 {
-  font-size: 3.125rem;
 }
 
 .image-login {
   background-image: url(../img/neflixtop.jpeg);
   background-size: cover;
-  height: 1200px;
+  height: 100vh;
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: -1;
   box-shadow: 10px 10px 10000px 100px black inset;
 }
 
-.login-select {
-  display: flex;
-  align-items: center;
-  line-height: 2rem;
-  z-index: 1;
-  gap: 1.5rem;
-}
-.login-select select {
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  background: transparent;
-  color: #ccc;
-  border: 1px solid white;
-  border-radius: 5px;
-}
-.login-select button {
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  border: 2px solid #e50914;
-  border-radius: 5px;
-  background: #e50914;
-  color: white;
-  cursor: pointer;
-}
-
-.navlog {
-  line-height: 2rem;
-}
-.navlog h2 {
-  color: red;
-  font-family: "Bebas Neue", cursive;
-  margin-top: -10rem;
-  margin-left: 4rem;
-  font-size: 4rem;
-}
-.navlog h2 a {
-  color: red;
-}
-
-.navlog-container {
-  margin-top: -60rem;
-  margin-left: 73rem;
-  display: flex;
-  align-items: center;
-  line-height: 2rem;
-  z-index: 1;
-  gap: 1.5rem;
-}
-.navlog-container select {
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  background: transparent;
-  color: #ccc;
-  border: 1px solid white;
-  border-radius: 5px;
-}
-.navlog-container button {
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  border: 2px solid #e50914;
-  border-radius: 5px;
-  background: #e50914;
-  color: white;
-  cursor: pointer;
-}
-
 .login {
   color: white;
-  width: 450px;
+  width: 100%; /* Set width to 100% */
+  max-width: 450px; /* Add max-width to limit width on larger screens */
   background: #000000bf;
-  height: 600px;
+  height: auto;
   margin: auto;
   border-radius: 10px;
+  padding: 20px;
 }
-.login .login-border {
-  width: 100%;
-  height: 100%;
-  padding: 3rem;
+
+
+.login-border {
   display: flex;
-  flex-flow: column;
+  flex-direction: column;
+  align-items: center;
 }
-.login .login-border input {
-  padding: 1rem;
+
+.login-border input {
+  padding: 10px;
   border-radius: 5px;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
   border: 1px solid white;
   outline: none;
 }
-.login .login-border button {
-  padding: 1rem;
+
+.login-border button {
+  padding: 10px;
   border-radius: 5px;
   border: 1px solid #e50914;
   background: #e50914;
   color: white;
   font-size: 1rem;
-  margin: 2rem 0;
+  margin: 20px 0;
   cursor: pointer;
 }
-.login .login-border h1 {
+
+.login-border h1 {
   font-size: 2rem;
   font-family: "Poppins", sans-serif;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
-.login .login-border ul {
+
+.login-border ul {
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #858585;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
-.login .login-border ul li a {
+
+.login-border ul li a {
   text-decoration: none;
   color: #858585;
 }
-.login .login-border ul li span {
+
+.login-border ul li span {
   width: 0.5rem;
   height: 0.2rem;
   background: #fff;
   padding: 0 0.3rem;
 }
-.login .login-border .with {
+
+.login-border .with {
   display: flex;
+  align-items: center;
   gap: 1rem;
   color: #858585;
-  margin-bottom: 1rem;
-}
-.login .login-border .with span {
-  color: #fff;
-}
-.login .login-border p {
-  color: #858585;
-}
-.login .login-border p a {
-  text-decoration: none;
-  color: #0808d8;
+  margin-bottom: 10px;
 }
 
-.footerlogin {
-  background: #000000bf;
+.login-border .with span {
   color: #fff;
-  width: 100%;
-  height: 290px;
-  margin-top: 4.5rem;
 }
-.footerlogin .navfooter {
-  display: flex;
-  align-items: center;
-  line-height: 2rem;
-  z-index: 1;
-  gap: 1.5rem;
-  margin-left: 18rem;
+
+.login-border p {
+  color: #858585;
 }
-.footerlogin .navfooter i {
-  margin-right: -2.7rem;
-}
-.footerlogin .navfooter select {
-  padding: 1.3rem 1.5rem 1.3rem 1.5rem;
-  background: transparent;
-  color: #ccc;
-  border: 1px solid #303030;
-  border-radius: 5px;
-  margin-top: -1rem;
-}
-.footerlogin h2 {
-  margin-left: 18rem;
-  padding-top: 3rem;
-  font-family: "Poppins", sans-serif;
-  font-size: 1.1rem;
-  color: #535353;
-}
-.footerlogin h2 a {
+
+.login-border button a {
   text-decoration: none;
-  color: #535353;
+  color: #fff;
 }
-.footerlogin .footer {
-  width: 70%;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.footerlogin .footer ul {
-  list-style: none;
-}
-.footerlogin .footer div {
-  margin: 3rem;
-  margin-left: 5rem;
-}
-.footerlogin .footer li {
-  font-size: 1.1rem;
-  font-family: "Poppins", sans-serif;
-  line-height: 2rem;
-  color: #535353;
-}
-.footerlogin .footer li:hover {
-  border-bottom: 1px solid #1b1b1b;
-  cursor: pointer;
-} */
