@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "./axios";
 import "../css/Row.css";
 import YouTube from "react-youtube";
@@ -9,6 +9,8 @@ const base_url = "https://image.tmdb.org/t/p/original/";
 function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const rowRef = useRef(null);
 
   useEffect(() => {
     async function fetchData() {
@@ -42,12 +44,31 @@ function Row({ title, fetchUrl, isLargeRow }) {
     }
   };
 
+  const scrollLeft = () => {
+    if (rowRef.current) {
+      const scrollAmount = 200;
+      rowRef.current.scrollLeft -= scrollAmount;
+      setScrollPosition(rowRef.current.scrollLeft);
+    }
+  };
+
+  const scrollRight = () => {
+    if (rowRef.current) {
+      const scrollAmount = 200;
+      rowRef.current.scrollLeft += scrollAmount;
+      setScrollPosition(rowRef.current.scrollLeft);
+    }
+  };
+
   return (
     <div className="row">
       <h2>{title}</h2>
-      <div className="row__posters">
-        {movies.map((movie) => {
-          return (
+      <div className="row__container">
+        <button className="row__scrollButton left" onClick={scrollLeft}>
+          {"<"}
+        </button>
+        <div className="row__posters" ref={rowRef}>
+          {movies.map((movie) => (
             <img
               key={movie.id}
               onClick={() => handleClick(movie)}
@@ -57,8 +78,11 @@ function Row({ title, fetchUrl, isLargeRow }) {
               }`}
               alt={movie.name}
             />
-          );
-        })}
+          ))}
+        </div>
+        <button className="row__scrollButton right" onClick={scrollRight}>
+          {">"}
+        </button>
       </div>
       {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
     </div>
