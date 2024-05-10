@@ -1,6 +1,7 @@
 .row {
   margin-left: 20px;
   color: white;
+  position: relative;
 }
 
 .row__posters {
@@ -32,4 +33,38 @@
 
 .row__posterLarge:hover {
   transform: scale(1.09);
+}
+
+.chevron_buttons_left{
+  display: none;
+  position: absolute;
+  left: 0;
+  top:50%;
+  opacity: 0.5;
+  cursor: pointer;
+  z-index: 10;
+  
+}
+
+.chevron_buttons_right{
+  display: none;
+  position: absolute;
+  right: 0;
+  top:50%;
+  opacity: 0.5;
+  cursor: pointer;
+  z-index: 10;
+  
+}
+.chevron_buttons_left:hover{
+  opacity: 1;
+
+}
+
+.chevron_buttons_right:hover{
+  opacity: 1;
+
+}
+.row:hover .chevron_buttons_left, .row:hover .chevron_buttons_right{
+  display: block;
 }

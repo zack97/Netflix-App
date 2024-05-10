@@ -3,11 +3,11 @@ import "../css/Footer.css";
 
 function Footer() {
   return (
-    <footer class="footerlogin footerlogin-accueil">
+    <footer className="footerlogin footerlogin-accueil">
       <h2>
         Questions? Call <a href="#">0800-800-82</a>
       </h2>
-      <div class="footer">
+      <div className="footer">
         <div>
           <ul>
             <li>Audio and subtitles</li>
@@ -39,8 +39,8 @@ function Footer() {
         </div>
       </div>
 
-      <div class="navfooter">
-        <i class="fas fa-globe"></i>
+      <div className="navfooter">
+        <i className="fas fa-globe"></i>
         <select>
           <option value="">Security code</option>
         </select>
